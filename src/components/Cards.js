@@ -20,6 +20,10 @@ const WrapperCards=styled.div`
         background-color:${theme.primaryColor};
         padding:3% 8%;
         border-radius:30%;
+        &:hover{
+            transition: 2s;
+            transform: scale(1.5);
+        }
     }
 `
 
