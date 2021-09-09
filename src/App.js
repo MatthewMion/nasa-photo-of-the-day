@@ -11,14 +11,15 @@ const WrapperDiv = styled.div`
 display:flex;
 flex-direction:column;
 font-family: 'Nunito', sans-serif;
+color:white;
 text-align: center;
+align-items:center;
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://img.wallpapersafari.com/desktop/1280/1024/66/96/kdyGq9.png');
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
 `;
-const WrapperHeader=styled.header`
-`
-const WrapperCards=styled.div`
-`
-const WrapperFooter=styled.footer`
-`
 function App() {
   const [nasaApod, setNasaApod] = useState({})
   
