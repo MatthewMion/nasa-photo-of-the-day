@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import styled from "styled-components";
 import "./App.css";
 import axios from 'axios';
 import {BASE_URL, API_KEY} from './constants';
@@ -6,7 +7,18 @@ import Header from './components/Header';
 import Cards from './components/Cards';
 import Footer from './components/Footer';
 
-
+const WrapperDiv = styled.div`
+display:flex;
+flex-direction:column;
+font-family: 'Nunito', sans-serif;
+text-align: center;
+`;
+const WrapperHeader=styled.header`
+`
+const WrapperCards=styled.div`
+`
+const WrapperFooter=styled.footer`
+`
 function App() {
   const [nasaApod, setNasaApod] = useState({})
   
@@ -18,15 +30,12 @@ function App() {
     .catch(err=> console.error(err))
   }, [])
   return (
-    <div className="App">
+    <WrapperDiv>
       <Header />
-      {/* <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p> */}
+
       <Cards nasaApod={nasaApod}/>
       <Footer />
-    </div>
+    </WrapperDiv>
   );
 }
 
